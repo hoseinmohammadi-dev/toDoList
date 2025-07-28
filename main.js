@@ -44,7 +44,8 @@ function checkBox(s) {
 let num = 1
 function MyEdit(s) {
     const editBox = s.parentElement.previousElementSibling.children[2]
-    const temp = s.parentElement.previousElementSibling.children[1]
+    const temp = s.parentElement.previousElementSibling.children[1].innerText
+    
     let textEdit = editBox.value
     if (num % 2) {
         editBox.classList.remove('hide')
