@@ -19,8 +19,13 @@ body {
     font-family: 'Vazir', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
 }
 
 .main {
@@ -30,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
     .box {
         background: #fff;
         border-radius: 20px;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         padding: 30px 40px;
 
         .inp-box {
@@ -62,11 +67,11 @@ h1, h2, h3, h4, h5, h6 {
                 border-radius: 15px;
                 cursor: pointer;
                 transition: 0.4s ease;
-                box-shadow: 0 6px 12px rgba(118,75,162,0.4);
+                box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);
 
                 &:hover {
                     background-color: #5a357f;
-                    box-shadow: 0 8px 16px rgba(90,53,127,0.6);
+                    box-shadow: 0 8px 16px rgba(90, 53, 127, 0.6);
                 }
             }
         }
@@ -83,13 +88,13 @@ h1, h2, h3, h4, h5, h6 {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    box-shadow: 0 8px 15px rgba(0,0,0,0.07);
+                    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.07);
                     transform: translateX(0);
                     transition: transform 0.6s ease, box-shadow 0.3s ease;
 
                     &:hover {
                         transform: translateY(-4px);
-                        box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+                        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
                     }
 
                     >div:first-child {
@@ -151,12 +156,64 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
-.hide{
+
+#tittle-delete {
+    margin-top: 70px;
+    text-align: center;
+    color: rgba(255, 254, 254, 0.552);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.garbage {
+    background: rgba(255, 254, 254, 0.165);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    margin-top: 10px;
+
+    >.delete-list {
+        >li {
+            list-style-type: none;
+            background: #f9f9fb4a;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.07);
+            transform: translateX(0);
+            transition: transform 0.6s ease, box-shadow 0.3s ease;
+
+            >h3{
+                color: rgba(255, 255, 255, 0.576);
+            }
+            
+            >span{
+                cursor: pointer;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.hide {
     display: none !important;
 }
 
-.delete{
-   opacity: 0 ;
-  transform: translateX(100%);
-  transition:0.7s ease, transform 0.5s ease; 
+.delete {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.7s ease, transform 0.5s ease;
 }

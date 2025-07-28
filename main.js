@@ -2,6 +2,7 @@ const btn = document.querySelector('.inp-box>button')
 const inp = document.querySelector('.inp-box>input')
 const ul = document.querySelector('ul')
 const li = document.querySelectorAll('ul>li')
+const deleteList = document.querySelector('.delete-list')
 
 let temp
 btn.addEventListener('click', () => {
@@ -10,7 +11,11 @@ btn.addEventListener('click', () => {
     if (temp === '') {
         alert('write your task')
     } else {
-        console.log(temp);
+       myAdd(temp)
+    }
+})
+
+function myAdd(temp){
         let myLi = document.createElement('li')
         myLi.innerHTML = `<div>
                                 <span><input type="checkbox" onchange='checkBox(this)'></span>
@@ -26,8 +31,7 @@ btn.addEventListener('click', () => {
 
         inp.value = null
         inp.focus()
-    }
-})
+}
 
 function checkBox(s) {
     const h3 = s.parentElement.nextElementSibling
@@ -45,7 +49,7 @@ function checkBox(s) {
 function MyEdit(s) {
     const editBox = s.parentElement.previousElementSibling.children[2]
     const temp = s.parentElement.previousElementSibling.children[1]
-    
+
     if (editBox.classList.contains('hide')) {
         editBox.classList.remove('hide')
         s.innerHTML = '✅'
@@ -64,10 +68,26 @@ function MyEdit(s) {
 
 function myDel(s) {
     const li = s.parentElement.parentElement;
+    const oldText = s.parentElement.previousElementSibling.children[1].innerText
     li.classList.add('delete')
 
     setTimeout(() => {
         li.remove()
-    }, 700);
+    }, 300);
+
+    const delLi = document.createElement('li');
+    delLi.innerHTML = ` 
+        <h3>${oldText}</h3>
+        <span onclick='addAgain(this)'>🔃</span> `;
+
+    deleteList.appendChild(delLi)
+    console.log(oldText);
+    
+}
+
+function addAgain(s){
+    let deleteText = s.previousElementSibling.innerText
+    s.parentElement.remove()
+    myAdd(deleteText)
 
 }
