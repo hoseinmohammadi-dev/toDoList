@@ -1,5 +1,4 @@
 const btn = document.querySelector('.btns>button')
-// const selectGroup = document.querySelector('.btns')[2]
 const inp = document.querySelector('.inp-box>input')
 const ul = document.querySelector('ul')
 const li = document.querySelectorAll('ul>li')
