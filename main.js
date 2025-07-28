@@ -1,4 +1,4 @@
-const btn = document.querySelector('.btns>button')
+const btn = document.querySelector('.inp-box>button')
 const inp = document.querySelector('.inp-box>input')
 const ul = document.querySelector('ul')
 const li = document.querySelectorAll('ul>li')
@@ -49,7 +49,7 @@ function MyEdit(s) {
     if (num % 2) {
         editBox.classList.remove('hide')
         s.innerHTML = '✅'
-        editBox.innerText=temp
+        editBox.innerText = temp
     }
     else {
         editBox.classList.add('hide')
@@ -59,6 +59,12 @@ function MyEdit(s) {
     num++
 }
 
-function myDel(s){
-    s.parentElement.parentElement.classList.add('hide')
+function myDel(s) {
+    const li = s.parentElement.parentElement;
+    li.classList.add('delete')
+
+    setTimeout(() => {
+        li.remove()
+    }, 700);
+
 }
