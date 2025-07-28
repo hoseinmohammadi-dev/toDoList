@@ -41,23 +41,25 @@ function checkBox(s) {
 }
 
 
-let num = 1
+// let num = 1
 function MyEdit(s) {
     const editBox = s.parentElement.previousElementSibling.children[2]
-    const temp = s.parentElement.previousElementSibling.children[1].innerText
+    const temp = s.parentElement.previousElementSibling.children[1]
     
-    let textEdit = editBox.value
-    if (num % 2) {
+    if (editBox.classList.contains('hide')) {
         editBox.classList.remove('hide')
         s.innerHTML = '✅'
-        editBox.innerText = temp
+        editBox.value = temp.textContent
+        temp.classList.add('hide');
     }
     else {
+        let textEdit = editBox.value
         editBox.classList.add('hide')
         s.innerHTML = '✏️'
         temp.innerText = textEdit
+        temp.classList.remove('hide');
     }
-    num++
+    // num++
 }
 
 function myDel(s) {
