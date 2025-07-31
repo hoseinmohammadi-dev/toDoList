@@ -9,7 +9,7 @@ Perfect for managing daily tasks with a user-friendly interface.
 ## 🔗 Live Demo
 
 You can check out the live version of the project here:  
-👉 [Click to View Demo](https://hoseinmohammadi-dev.github.io/toDoList-group/)
+👉 [Click to View Demo](https://hoseinmohammadi-dev.github.io/toDoList/)
 
 
 
